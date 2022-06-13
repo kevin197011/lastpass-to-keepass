@@ -16,8 +16,8 @@ kp = KeepassUtil(config.keepass_filepath, config.keepass_password)
 if not kp.find_group(groupname):
     kp.add_group(groupname)
 
-for dt in data:
-    print(dt)
+for dt in data[1:]:
+    # if dt
     if not len(dt):
         continue
     kp.write_keepass(groupname, dt)
